@@ -9,7 +9,7 @@ const genUsage = require('./src/usage');
 const genContrib = require('./src/contrib');
 const genTests = require('./src/tests');
 const genToc = require('./src/Toc');
-//const genGitHub  = require('./src/gitHub');
+const genGitHub  = require('./src/github');
 const genLicense = require('./src/license');
 
 //onst pageTitle = genTitle(title);
@@ -99,4 +99,10 @@ const promptUser = () => {
   .then(userData => {
     genTests(theFile, userData.tests);
     return userData;
+  })
+  .then(userData => {
+    genGitHub(theFile, userData.github);
+  })
+  .catch(err => {
+    console.log(err);
   });

@@ -1,8 +1,14 @@
  
-# Title
+# Titls
 
 ## Description
 Descr
+## Table of Contents
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributions](#Contributions)
+* [License](#License)
+* [Tests](#Tests)
 
 ## Installation
 Install
@@ -11,16 +17,13 @@ Install
 Usage
 
 ## Contributions
-Contric
+Contrib
 
 ## License
-The product is licensed under GNU
-## Table of Contents
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [Contributions](#Contributions)
-* [License](#License)
-* [Tests](#Tests)
+The product is licensed under MIT
+
+## Questions
+https://github.com/VictoriousOne
 
 ## Tests
 Tests
