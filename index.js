@@ -7,7 +7,7 @@ const genDescr = require('./src/descr');
 const genInstall = require('./src/install');
 const genUsage = require('./src/usage');
 const genContrib = require('./src/contrib');
-//const genTest = require('./src/test');
+const genTests = require('./src/tests');
 const genToc = require('./src/Toc');
 //const genGitHub  = require('./src/gitHub');
 const genLicense = require('./src/license');
@@ -49,7 +49,7 @@ const promptUser = () => {
       },
       {
         type: 'input',
-        name: 'test',
+        name: 'tests',
         message: 'Enter testing instructions.'
       },
       {
@@ -94,5 +94,9 @@ const promptUser = () => {
   })
   .then(userData => {
     genLicense(theFile, userData.license);
+    return userData;
+  })
+  .then(userData => {
+    genTests(theFile, userData.tests);
     return userData;
   });
