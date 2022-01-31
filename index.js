@@ -10,7 +10,7 @@ const genContrib = require('./src/contrib');
 //const genTest = require('./src/test');
 const genToc = require('./src/Toc');
 //const genGitHub  = require('./src/gitHub');
-//const genLicense = require('./src/license');
+const genLicense = require('./src/license');
 
 //onst pageTitle = genTitle(title);
 
@@ -90,5 +90,9 @@ const promptUser = () => {
   })
   .then(userData => {
     genContrib(theFile, userData.contrib);
+    return userData;
+  })
+  .then(userData => {
+    genLicense(theFile, userData.license);
     return userData;
   });
