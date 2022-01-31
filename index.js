@@ -8,7 +8,7 @@ const genInstall = require('./src/install');
 //const genUsage = require('./src/usage');
 //const genContrib = require('./src/contrib');
 //const genTest = require('./src/test');
-//const genToc = require('./src/Toc');
+const genToc = require('./src/Toc');
 //const genGitHub  = require('./src/gitHub');
 //const genLicense = require('./src/license');
 
@@ -77,5 +77,10 @@ const promptUser = () => {
     return userData;
   })
   .then(userData => {
-    genInstall(theFile, userData.install)
+    genToc(theFile);
+    return userData;
+  })
+  .then(userData => {
+    genInstall(theFile, userData.install);
+    return userData;
   });
