@@ -2,7 +2,8 @@ const fs = require('fs');
 
 const genToc = (theFile) => {
     return new Promise((resolve, reject) => {
-        fs.appendFile(theFile, '\r\n' + '* [Installation](#Installation)' +
+        fs.appendFile(theFile, '\r\n' + '## Table of Contents' +
+        '\r\n' + '* [Installation](#Installation)' +
         '\r\n' + '* [Usage](#Usage)' + 
         '\r\n' + '* [Contributions](#Contributions)' +
         '\r\n' + '* [License](#License)' +
