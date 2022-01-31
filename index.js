@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const genTitle = require('./src/title');
 const theFile = "./ReadMe.md";
-//const genDesc = require('./src/desc');
+const genDescr = require('./src/descr');
 //const genInstall = require('./src/install');
 //const genUsage = require('./src/usage');
 //const genContrib = require('./src/contrib');
@@ -69,5 +69,9 @@ const promptUser = () => {
 
   promptUser()
   .then(userData => {
-    genTitle(theFile, userData.title);
+  genTitle(theFile, userData.title);
+  return userData; 
+  })
+  .then(userData => {
+    genDescr(theFile, userData.description);
   });
