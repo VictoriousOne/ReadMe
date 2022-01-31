@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const genTitle = require('./src/title');
+const theFile = "./ReadMe.md";
 //const genDesc = require('./src/desc');
 //const genInstall = require('./src/install');
 //const genUsage = require('./src/usage');
@@ -13,15 +14,11 @@ const genTitle = require('./src/title');
 
 //onst pageTitle = genTitle(title);
 
-var cmdArgs = process.argv;
-var title = cmdArgs[2];
+//var cmdArgs = process.argv;
+//var title = cmdArgs[2];
 
-const pageTitle = genTitle(title);
+// const pageTitle = genTitle(theFile, title);
 
-//fs.writeFile('./README.md', pageTitle, err => {
-//    if (err) throw err;
-//    console.log("Title written to README file");
-//})
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -70,4 +67,7 @@ const promptUser = () => {
     ]);
   };
 
-  promptUser();
+  promptUser()
+  .then(userData => {
+    genTitle(theFile, userData.title);
+  });
