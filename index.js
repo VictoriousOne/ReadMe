@@ -4,7 +4,7 @@ const fs = require('fs');
 const genTitle = require('./src/title');
 const theFile = "./ReadMe.md";
 const genDescr = require('./src/descr');
-//const genInstall = require('./src/install');
+const genInstall = require('./src/install');
 //const genUsage = require('./src/usage');
 //const genContrib = require('./src/contrib');
 //const genTest = require('./src/test');
@@ -74,4 +74,8 @@ const promptUser = () => {
   })
   .then(userData => {
     genDescr(theFile, userData.description);
+    return userData;
+  })
+  .then(userData => {
+    genInstall(theFile, userData.install)
   });

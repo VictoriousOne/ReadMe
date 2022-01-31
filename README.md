@@ -1,5 +1,8 @@
 
-# ReadMe Generator
+# One More Time
 
 ## Description
-Generate GitHub ReadMe
+Two more Times
+
+## Installation
+Node js, NPM, Inquire Package
