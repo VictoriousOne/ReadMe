@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const genTitle = (theFile, title) => {
     return new Promise((resolve, reject) => {
-        fs.appendFile(theFile, '\r\n' + `# ${title}`, 'utf8', err => {
+        fs.appendFile(theFile, '\r\n\r\n' + `# ${title}`, 'utf8', err => {
             if (err) {
                 reject(err);
                 return;

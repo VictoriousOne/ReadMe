@@ -9,7 +9,7 @@ const genUsage = require('./src/usage');
 const genContrib = require('./src/contrib');
 const genTests = require('./src/tests');
 const genToc = require('./src/Toc');
-const genGitHub  = require('./src/github');
+const genGitHub  = require('./src/githubAndEmail');
 const genLicense = require('./src/license');
 
 //onst pageTitle = genTitle(title);
@@ -58,6 +58,11 @@ const promptUser = () => {
         message: 'Enter your github user name.'
       },
       {
+        type: 'input',
+        name: 'email',
+        message: 'Enter youur email address.'
+      },
+      {
         type: 'list',
         name: 'license',
         message: 'Choose your license type.',
@@ -101,7 +106,8 @@ const promptUser = () => {
     return userData;
   })
   .then(userData => {
-    genGitHub(theFile, userData.github);
+    genGitHub(theFile, userData.github, userData.email);
+    return userData;
   })
   .catch(err => {
     console.log(err);
