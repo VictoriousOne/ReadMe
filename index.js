@@ -12,14 +12,6 @@ const genToc = require('./src/Toc');
 const genGitHub  = require('./src/githubAndEmail');
 const genLicense = require('./src/license');
 
-//onst pageTitle = genTitle(title);
-
-//var cmdArgs = process.argv;
-//var title = cmdArgs[2];
-
-// const pageTitle = genTitle(theFile, title);
-
-
 const promptUser = () => {
     return inquirer.prompt([
       {
@@ -72,43 +64,42 @@ const promptUser = () => {
     ]);
   };
 
+
+  function genReadMe(theFile, userData) {
+
+    genTitle(theFile, userData.title)
+    .then(writeDescription => {
+      return genDescr(theFile, userData.description);
+    })
+    .then(writeTOC => {
+      return genToc(theFile);
+    })
+    .then(writeInstall => {
+      return genInstall(theFile, userData.install);
+    })
+    .then(writeUsage => {
+      return genUsage(theFile, userData.usage);
+    })
+    .then(writeContibutions => {
+      return genContrib(theFile, userData.contrib);
+    })
+    .then(writeLicense => {
+      return genLicense(theFile, userData.license);
+    })
+    .then(writeTests => {
+      return genTests(theFile, userData.tests);
+    })
+    .then(writeGitHubEmail => {
+      return genGitHub(theFile, userData.github, userData.email);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
+
+
   promptUser()
   .then(userData => {
-  genTitle(theFile, userData.title);
-  return userData; 
-  })
-  .then(userData => {
-    genDescr(theFile, userData.description);
-    return userData;
-  })
-  .then(userData => {
-    genToc(theFile);
-    return userData;
-  })
-  .then(userData => {
-    genInstall(theFile, userData.install);
-    return userData;
-  })
-  .then(userData => {
-    genUsage(theFile, userData.usage);
-    return userData;
-  })
-  .then(userData => {
-    genContrib(theFile, userData.contrib);
-    return userData;
-  })
-  .then(userData => {
-    genLicense(theFile, userData.license);
-    return userData;
-  })
-  .then(userData => {
-    genTests(theFile, userData.tests);
-    return userData;
-  })
-  .then(userData => {
-    genGitHub(theFile, userData.github, userData.email);
-    return userData;
-  })
-  .catch(err => {
-    console.log(err);
+  genReadMe(theFile, userData);
   });
+  

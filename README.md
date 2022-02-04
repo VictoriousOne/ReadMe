@@ -1,14 +1,8 @@
 
+# sdfsa
 
 ## Description
-ReadMe Generator
-# ReadMe
-
-## Installation
-Node js NPM, Inquirer
-
-## Usage
-node appName 
+sdfads
 
 ## Table of Contents
 * [Installation](#installation)
@@ -16,16 +10,24 @@ node appName
 * [Contributions](#contributions)
 * [License](#license)
 * [Tests](#tests)
+* [Questions](#questions)
 
-## License
-The product is licensed under GNU
+## Installation
+sadf
+
+## Usage
+asdfsa
 
 ## Contributions
-none
+sadf
 
-## Questions
-Github Profile: https://github.com/gittyUp
-For more questions, email somewhere@gmail.com
+## License
+The product is licensed under MIT
 
 ## Tests
-validate
+sdaf
+
+## Questions
+Github Profile: https://github.com/sdf
+
+For more questions, email saadf

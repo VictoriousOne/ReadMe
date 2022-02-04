@@ -7,7 +7,8 @@ const genToc = (theFile) => {
         '\r\n' + '* [Usage](#usage)' + 
         '\r\n' + '* [Contributions](#contributions)' +
         '\r\n' + '* [License](#license)' +
-        '\r\n' + '* [Tests](#tests)', 'utf8', err => {
+        '\r\n' + '* [Tests](#tests)' +
+        '\r\n' + '* [Questions](#questions)', 'utf8', err => {
             if (err) {
                 reject(err);
                 return;
