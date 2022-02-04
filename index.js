@@ -11,6 +11,7 @@ const genTests = require('./src/tests');
 const genToc = require('./src/Toc');
 const genGitHub  = require('./src/githubAndEmail');
 const genLicense = require('./src/license');
+const genBadge = require('./src/badge');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -67,7 +68,10 @@ const promptUser = () => {
 
   function genReadMe(theFile, userData) {
 
-    genTitle(theFile, userData.title)
+    genBadge(theFile, userData.license)
+    .then(writeTitle => {
+      return genTitle(theFile, userData.title);
+    })
     .then(writeDescription => {
       return genDescr(theFile, userData.description);
     })
