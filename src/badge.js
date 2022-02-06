@@ -5,9 +5,9 @@ var theBadge;
 
 const genBadge = (theFile, badge) => {
     return new Promise((resolve, reject) => {
-        if (badge != "none") {
+        if (badge !== "none") {
 
-            if (badge == "MIT") {
+            if (badge === "MIT") {
                 theBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
             }
             else {

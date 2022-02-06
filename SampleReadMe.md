@@ -1,10 +1,10 @@
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Professional ReadME
+# ReadME Generator
 
 ## Description
-Generate a Github ReadME
+Generates ReadME file for Github
 
 ## Table of Contents
 * [Installation](#installation)
@@ -15,16 +15,16 @@ Generate a Github ReadME
 * [Questions](#questions)
 
 ## Installation
- Clone repo, Insrtall Node, NPM and Requirer package
+Clone repo, Install Node, NPM, and Inquirer package
 
 ## Usage
 node index.js
 
 ## Contributions
-Conributions Welcome
+Contibutions are always welcomed
 
 ## License
-The product is licensed under GNU
+The product is licensed under MIT
 
 ## Tests
 You may validate all data prompts
@@ -32,4 +32,4 @@ You may validate all data prompts
 ## Questions
 Github Profile: https://github.com/VictoriousOne
 
-For more questions, email 789@gmail.com
+For more questions, email victory173451@gmail.com

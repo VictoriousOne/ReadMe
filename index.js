@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const genTitle = require('./src/title');
-const theFile = "./ReadMe.md";
+const theFile = "./SampleReadMe.md";
 const genDescr = require('./src/descr');
 const genInstall = require('./src/install');
 const genUsage = require('./src/usage');
@@ -172,7 +172,6 @@ const promptUser = () => {
       console.log(err);
     });
   }
-
 
   promptUser()
   .then(userData => {
