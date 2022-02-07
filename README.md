@@ -15,7 +15,7 @@ This is a commandline application that allows the user to create a Github ReadME
 * [Questions](#questions)
 
 ## Installation
- Clone repo, Install Node, NPM and Requirer package
+ Clone repo, Install Node, NPM and Inquirer package
 
 ## Usage
 At the Bash command line, enter node index.js. A demo of the app can be
