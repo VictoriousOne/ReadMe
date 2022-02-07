@@ -19,7 +19,7 @@ This is a commandline application that allows the user to create a Github ReadME
 
 ## Usage
 At the Bash command line, enter node index.js. A demo of the app can be
-seen here: https://watch.screencastify.com/v/JYuDGHigZHLVIv0gxOly
+seen here: https://watch.screencastify.com/v/p24E5Fu1pp5aM6WylVLQ
 
 ## Contributions
 Conributions are always welcomed.
