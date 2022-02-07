@@ -4,7 +4,7 @@
 # Professional ReadME
 
 ## Description
-Generate a Github ReadME
+This is a commandline application that allows the user to create a Github ReadME file,
 
 ## Table of Contents
 * [Installation](#installation)
@@ -15,21 +15,24 @@ Generate a Github ReadME
 * [Questions](#questions)
 
 ## Installation
- Clone repo, Insrtall Node, NPM and Requirer package
+ Clone repo, Install Node, NPM and Requirer package
 
 ## Usage
-node index.js
+At the Bash command line, enter node index.js. A demo of the app can be
+seen here: https://watch.screencastify.com/v/JYuDGHigZHLVIv0gxOly
 
 ## Contributions
-Conributions Welcome
+Conributions are always welcomed.
 
 ## License
 The product is licensed under GNU
 
 ## Tests
-You may validate all data prompts
+Since all prompt responses are required, you can test the application by not entering a prompt response and 
+just pressing enter key. Once all prompts are entered, the ReadME file will be placed in your project directory
+as "SampleReadMe.md"
 
 ## Questions
 Github Profile: https://github.com/VictoriousOne
 
-For more questions, email 789@gmail.com
+For more questions, email Victory173451@gmail.com
